@@ -1,0 +1,7 @@
+function doPost(e) {
+  var ss = SpreadsheetApp.openById("id da planilha aqui");
+  var sheet = ss.getSheetByName("page1"); // Altere se sua aba tiver outro nome
+  var data = [e.parameter.nome, e.parameter.email, e.parameter.telefone];
+  sheet.appendRow(data);
+  return ContentService.createTextOutput("Dados enviados com sucesso!");
+}
