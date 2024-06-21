@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulário simples para planilha do google</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="box-outer" style="text-align: left">
+      <div class="main_box">
+        <form id="dataForm" class="_form _form_1 _inline-form _dark">
+          <div class="_form-content">
+            <!-- NOME -->
+            <div class="_form_element _x08659229 _full_width">
+              <div class="_field-wrapper">
+                <label for="fullname" class="_form-label"
+                  >Qual é o seu nome?</label
+                >
+                <span hidden id="span-name" class="span-required"
+                  >Digite um nome válido</span
+                >
+                <input type="text" id="fullname" name="nome" required />
+              </div>
+            </div>
+            <!-- EMAIL -->
+            <div class="_form_element _x92830736 _full_width">
+              <div class="_field-wrapper">
+                <label for="email" class="_form-label">E-mail</label>
+                <input
+                  class="email"
+                  type="text"
+                  id="email"
+                  name="email"
+                  required
+                />
+              </div>
+            </div>
+            <!-- TELEFONE -->
+            <div class="_form_element _x12345678 _full_width">
+              <div class="_field-wrapper">
+                <label for="phone" class="_form-label">Telefone</label>
+                <input
+                  type="tel"
+                  maxlength="15"
+                  onkeyup="handlePhone(event)"
+                  id="phone"
+                  name="telefone"
+                  required
+                />
+              </div>
+            </div>
+          </div>
+          <button id="botaoEnviar" class="_submit" type="submit">
+            Enviar informações agora
+          </button>
+        </form>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
